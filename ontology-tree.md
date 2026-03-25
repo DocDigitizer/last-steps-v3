@@ -1,9 +1,14 @@
 # Document Type Ontology - Tree Visualization
 
+**Legend:** Square nodes `[ ]` are branches (have children). Rounded nodes `([ ])` are leaves (schema targets).
+
+---
+
+## Overview (Roots Only)
+
 ```mermaid
 graph TD
     ROOT((Document Ontology))
-
     ROOT --> R1[Legal & Compliance]
     ROOT --> R2[Finance, Accounting & Tax]
     ROOT --> R3[Insurance]
@@ -17,7 +22,20 @@ graph TD
     ROOT --> R11[Real Estate & Property]
     ROOT --> R12[Creative & Literary Works]
 
-    %% ===== 1. LEGAL & COMPLIANCE =====
+    classDef root fill:#1a1a2e,color:#fff,stroke:#e94560
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    class ROOT root
+    class R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12 branch
+```
+
+---
+
+## 1. Legal & Compliance
+
+```mermaid
+graph TD
+    R1[Legal & Compliance]
+
     R1 --> L1_1[Contracts & Agreements]
     R1 --> L1_2[Court & Litigation]
     R1 --> L1_3[Regulatory & Compliance]
@@ -53,7 +71,19 @@ graph TD
     L1_5 --> L1_5_3([Shareholder & Equity Documents])
     L1_5 --> L1_5_4([Corporate Resolutions & Authorizations])
 
-    %% ===== 2. FINANCE, ACCOUNTING & TAX =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R1,L1_1,L1_2,L1_3,L1_4,L1_5 branch
+```
+
+---
+
+## 2. Finance, Accounting & Tax
+
+```mermaid
+graph TD
+    R2[Finance, Accounting & Tax]
+
     R2 --> L2_1[Banking & Investments]
     R2 --> L2_2[Financial Reporting]
     R2 --> L2_3([Bookkeeping & Ledgers])
@@ -84,7 +114,19 @@ graph TD
     L2_6 --> L2_6_2([Audit Planning & Engagement])
     L2_6 --> L2_6_3([Management Letters & Remediation])
 
-    %% ===== 3. INSURANCE =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R2,L2_1,L2_2,L2_4,L2_5,L2_6 branch
+```
+
+---
+
+## 3. Insurance
+
+```mermaid
+graph TD
+    R3[Insurance]
+
     R3 --> L3_1[Policies & Coverage]
     R3 --> L3_2[Claims & Settlements]
     R3 --> L3_3[Underwriting & Actuarial]
@@ -102,7 +144,19 @@ graph TD
     L3_3 --> L3_3_2([Actuarial Reports & Studies])
     L3_3 --> L3_3_3([Reinsurance Documents])
 
-    %% ===== 4. HEALTHCARE & MEDICAL =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R3,L3_1,L3_2,L3_3 branch
+```
+
+---
+
+## 4. Healthcare & Medical
+
+```mermaid
+graph TD
+    R4[Healthcare & Medical]
+
     R4 --> L4_1[Patient Records]
     R4 --> L4_2[Clinical]
     R4 --> L4_3[Pharmaceutical]
@@ -117,7 +171,7 @@ graph TD
     L4_2 --> L4_2_1([Clinical Trial Protocols])
     L4_2 --> L4_2_2([Case Report Forms & Data])
     L4_2 --> L4_2_3([Adverse Event Reports])
-    L4_2 --> L4_2_4([Regulatory Submissions Clinical])
+    L4_2 --> L4_2_4([Regulatory Submissions - Clinical])
 
     L4_3 --> L4_3_1([Drug Approval & Registration])
     L4_3 --> L4_3_2([Prescriptions & Medication Records])
@@ -133,7 +187,19 @@ graph TD
     L4_5 --> L4_5_2([Provider Credentialing])
     L4_5 --> L4_5_3([Payer & Reimbursement Documents])
 
-    %% ===== 5. GOVERNMENT & PUBLIC ADMINISTRATION =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R4,L4_1,L4_2,L4_3,L4_4,L4_5 branch
+```
+
+---
+
+## 5. Government & Public Administration
+
+```mermaid
+graph TD
+    R5[Government & Public Administration]
+
     R5 --> L5_1[Identity Documents]
     R5 --> L5_2[Civil Records]
     R5 --> L5_3[Permits & Licenses]
@@ -164,7 +230,19 @@ graph TD
     L5_5 --> L5_5_2([FOI & Transparency Documents])
     L5_5 --> L5_5_3([Public Notices & Announcements])
 
-    %% ===== 6. EDUCATION & RESEARCH =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R5,L5_1,L5_2,L5_3,L5_4,L5_5 branch
+```
+
+---
+
+## 6. Education & Research
+
+```mermaid
+graph TD
+    R6[Education & Research]
+
     R6 --> L6_1[Academic Records]
     R6 --> L6_2[Curriculum & Instruction]
     R6 --> L6_3[Scientific Research]
@@ -191,7 +269,19 @@ graph TD
     L6_5 --> L6_5_2([Faculty & Staff Records])
     L6_5 --> L6_5_3([Program & Institutional Reviews])
 
-    %% ===== 7. HUMAN RESOURCES & EMPLOYMENT =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R6,L6_1,L6_2,L6_3,L6_4,L6_5 branch
+```
+
+---
+
+## 7. Human Resources & Employment
+
+```mermaid
+graph TD
+    R7[Human Resources & Employment]
+
     R7 --> L7_1[Recruitment & Talent Acquisition]
     R7 --> L7_2[Employee Records]
     R7 --> L7_3[Compensation & Benefits]
@@ -219,7 +309,19 @@ graph TD
     L7_5 --> L7_5_2([Certification & Compliance Training])
     L7_5 --> L7_5_3([Development Plans])
 
-    %% ===== 8. SALES, MARKETING & PROCUREMENT =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R7,L7_1,L7_2,L7_3,L7_4,L7_5 branch
+```
+
+---
+
+## 8. Sales, Marketing & Procurement
+
+```mermaid
+graph TD
+    R8[Sales, Marketing & Procurement]
+
     R8 --> L8_1[Sales]
     R8 --> L8_2[Marketing & Communications]
     R8 --> L8_3[Procurement & Vendor Management]
@@ -242,7 +344,19 @@ graph TD
     L8_4 --> L8_4_2([Complaints & Escalations])
     L8_4 --> L8_4_3([Surveys & Feedback])
 
-    %% ===== 9. TECHNICAL & PRODUCT DOCUMENTATION =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R8,L8_1,L8_2,L8_3,L8_4 branch
+```
+
+---
+
+## 9. Technical & Product Documentation
+
+```mermaid
+graph TD
+    R9[Technical & Product Documentation]
+
     R9 --> L9_1[System & Architecture]
     R9 --> L9_2[API & Developer Documentation]
     R9 --> L9_3[Engineering Specs]
@@ -265,7 +379,19 @@ graph TD
     L9_4 --> L9_4_2([Tutorials & How-To Articles])
     L9_4 --> L9_4_3([Reference & Knowledge Base])
 
-    %% ===== 10. OPERATIONS & CORPORATE GOVERNANCE =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R9,L9_1,L9_2,L9_3,L9_4 branch
+```
+
+---
+
+## 10. Operations & Corporate Governance
+
+```mermaid
+graph TD
+    R10[Operations & Corporate Governance]
+
     R10 --> L10_1([Standard Operating Procedures])
     R10 --> L10_2[Corporate Governance]
     R10 --> L10_3[Strategic Planning]
@@ -285,7 +411,19 @@ graph TD
     L10_5 --> L10_5_2([Customs & Trade Compliance])
     L10_5 --> L10_5_3([Warehouse & Inventory Records])
 
-    %% ===== 11. REAL ESTATE & PROPERTY =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R10,L10_2,L10_3,L10_5 branch
+```
+
+---
+
+## 11. Real Estate & Property
+
+```mermaid
+graph TD
+    R11[Real Estate & Property]
+
     R11 --> L11_1[Titles & Deeds]
     R11 --> L11_2[Leases & Rental]
     R11 --> L11_3([Appraisals & Valuations])
@@ -309,22 +447,26 @@ graph TD
     L11_5 --> L11_5_2([Association & Community Documents])
     L11_5 --> L11_5_3([Property Financial Records])
 
-    %% ===== 12. CREATIVE & LITERARY WORKS =====
+    classDef branch fill:#16213e,color:#fff,stroke:#0f3460
+    classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
+    class R11,L11_1,L11_2,L11_4,L11_5 branch
+```
+
+---
+
+## 12. Creative & Literary Works
+
+```mermaid
+graph TD
+    R12[Creative & Literary Works]
+
     R12 --> L12_1([Scripts & Screenplays])
     R12 --> L12_2([Prose & Fiction])
     R12 --> L12_3([Poetry & Verse])
     R12 --> L12_4([Creative Briefs & Concepts])
     R12 --> L12_5([Journalism & Editorial])
 
-    %% ===== STYLING =====
-    %% Rounded nodes = LEAF, square nodes = BRANCH
-    classDef root fill:#1a1a2e,color:#fff,stroke:#e94560
     classDef branch fill:#16213e,color:#fff,stroke:#0f3460
     classDef leaf fill:#0f3460,color:#fff,stroke:#53a8b6
-
-    class ROOT root
-    class R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12 branch
-    class L1_1,L1_2,L1_3,L1_4,L1_5,L2_1,L2_2,L2_4,L2_5,L2_6,L3_1,L3_2,L3_3,L4_1,L4_2,L4_3,L4_4,L4_5,L5_1,L5_2,L5_3,L5_4,L5_5,L6_1,L6_2,L6_3,L6_4,L6_5,L7_1,L7_2,L7_3,L7_4,L7_5,L8_1,L8_2,L8_3,L8_4,L9_1,L9_2,L9_3,L9_4,L10_2,L10_3,L10_5,L11_1,L11_2,L11_4,L11_5 branch
+    class R12 branch
 ```
-
-**Legend:** Square nodes `[ ]` are branches (have children). Rounded nodes `([ ])` are leaves (schema targets).
